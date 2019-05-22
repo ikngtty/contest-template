@@ -1,9 +1,3 @@
-module Enumerable
-  def sum
-    reduce(:+)
-  end
-end
-
 n = gets.chomp.to_i
 a = Array.new(n)
 b = Array.new(n)
