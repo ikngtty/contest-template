@@ -1,2 +1,8 @@
+# Ruby bundler
+vendor/
+
+# Python pipenv
 .venv/
+
+# Haskell stack
 .stack-work/
