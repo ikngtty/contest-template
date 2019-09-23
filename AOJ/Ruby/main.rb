@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 n = gets.to_i
 x, y, z = gets.split(' ').map(&:to_i)
 a = Array.new(n)
