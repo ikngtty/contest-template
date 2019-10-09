@@ -1,15 +1,18 @@
 import           Control.Monad
+import qualified Data.ByteString.Char8 as BS
+import           Data.Char
 import           Data.List
-import           Data.String
+import           Data.Maybe
 
 main = do
-  n <- fmap read getLine
-  [x, y, z] <- fmap readWords getLine
-  lines <- replicateM n getLine
-  let [a, b] = (transpose . map readWords) lines
+  n <- fmap (fst . fromJust . BS.readInt) BS.getLine
+  [x, y, z] <- readInts <$> BS.getLine
+  lines <- replicateM n BS.getLine
+  let [a, b] = transpose $ map readInts lines
   print $ solve a b x y z
   where
-    readWords = map read . words
+    readInts :: BS.ByteString -> [Int]
+    readInts = unfoldr (BS.readInt . BS.dropWhile isSpace)
 
 solve :: [Int] -> [Int] -> Int -> Int -> Int -> Int
 solve a b x y z = sum a + sum b + x + y + z
