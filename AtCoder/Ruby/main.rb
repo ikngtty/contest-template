@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+# Builtin if ruby was 2.4 or above.
 module Enumerable
-  def sum
-    reduce(:+)
+  def sum(init = 0, &block)
+    target = block_given? ? map(&block) : self
+    target.reduce(init, :+)
   end
 end
 
