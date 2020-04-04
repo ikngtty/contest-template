@@ -34,6 +34,95 @@ func main() {
 	fmt.Println(total)
 }
 
+// util
+// *   math(int)
+
+func AbsInt(x int) int {
+	if x >= 0 {
+		return x
+	}
+	return -x
+}
+
+func MinInt(values ...int) int {
+	if len(values) == 0 {
+		panic("no values")
+	}
+	min := values[0]
+	for _, v := range values {
+		if v < min {
+			min = v
+		}
+	}
+	return min
+}
+
+func MaxInt(values ...int) int {
+	if len(values) == 0 {
+		panic("no values")
+	}
+	max := values[0]
+	for _, v := range values {
+		if v > max {
+			max = v
+		}
+	}
+	return max
+}
+
+func PowInt(base int, exponent uint) int {
+	answer := 1
+	for i := uint(0); i < exponent; i++ {
+		answer *= base
+	}
+	return answer
+}
+
+// *   math(int)
+
+func AbsInt64(x int64) int64 {
+	if x >= 0 {
+		return x
+	}
+	return -x
+}
+
+func MinInt64(values ...int64) int64 {
+	if len(values) == 0 {
+		panic("no values")
+	}
+	min := values[0]
+	for _, v := range values {
+		if v < min {
+			min = v
+		}
+	}
+	return min
+}
+
+func MaxInt64(values ...int64) int64 {
+	if len(values) == 0 {
+		panic("no values")
+	}
+	max := values[0]
+	for _, v := range values {
+		if v > max {
+			max = v
+		}
+	}
+	return max
+}
+
+func PowInt64(base int64, exponent uint) int64 {
+	answer := int64(1)
+	for i := uint(0); i < exponent; i++ {
+		answer *= base
+	}
+	return answer
+}
+
+// * io
+
 type Scanner struct {
 	bufScanner *bufio.Scanner
 }
