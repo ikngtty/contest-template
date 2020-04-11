@@ -35,16 +35,16 @@ func main() {
 }
 
 // util
-// *   math(int)
+// *   intmath
 
-func AbsInt(x int) int {
+func Abs(x int) int {
 	if x >= 0 {
 		return x
 	}
 	return -x
 }
 
-func MinInt(values ...int) int {
+func Min(values ...int) int {
 	if len(values) == 0 {
 		panic("no values")
 	}
@@ -57,7 +57,7 @@ func MinInt(values ...int) int {
 	return min
 }
 
-func MaxInt(values ...int) int {
+func Max(values ...int) int {
 	if len(values) == 0 {
 		panic("no values")
 	}
@@ -70,7 +70,7 @@ func MaxInt(values ...int) int {
 	return max
 }
 
-func PowInt(base int, exponent uint) int {
+func Pow(base int, exponent uint) int {
 	answer := 1
 	for i := uint(0); i < exponent; i++ {
 		answer *= base
@@ -78,16 +78,14 @@ func PowInt(base int, exponent uint) int {
 	return answer
 }
 
-// *   math(int)
-
-func AbsInt64(x int64) int64 {
+func Abs64(x int64) int64 {
 	if x >= 0 {
 		return x
 	}
 	return -x
 }
 
-func MinInt64(values ...int64) int64 {
+func Min64(values ...int64) int64 {
 	if len(values) == 0 {
 		panic("no values")
 	}
@@ -100,7 +98,7 @@ func MinInt64(values ...int64) int64 {
 	return min
 }
 
-func MaxInt64(values ...int64) int64 {
+func Max64(values ...int64) int64 {
 	if len(values) == 0 {
 		panic("no values")
 	}
@@ -113,7 +111,7 @@ func MaxInt64(values ...int64) int64 {
 	return max
 }
 
-func PowInt64(base int64, exponent uint) int64 {
+func Pow64(base int64, exponent uint) int64 {
 	answer := int64(1)
 	for i := uint(0); i < exponent; i++ {
 		answer *= base
@@ -121,7 +119,7 @@ func PowInt64(base int64, exponent uint) int64 {
 	return answer
 }
 
-// * io
+// *   io
 
 type Scanner struct {
 	bufScanner *bufio.Scanner
