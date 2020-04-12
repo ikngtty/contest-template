@@ -35,7 +35,7 @@ func main() {
 }
 
 // util
-// *   intmath
+// *   math/simple
 
 func Abs(x int) int {
 	if x >= 0 {
