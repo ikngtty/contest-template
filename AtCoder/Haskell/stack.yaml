@@ -1,2 +1,3 @@
 packages: []
-resolver: lts-6.35 # ghc-7.10.3
+# NOTE: This LTS version is currently latest for ghc-8.8.3, but may be old in the future.
+resolver: lts-15.8

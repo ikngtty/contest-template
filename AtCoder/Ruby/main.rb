@@ -1,13 +1,5 @@
 # frozen_string_literal: true
 
-# Builtin if ruby was 2.4 or above.
-module Enumerable
-  def sum(init = 0, &block)
-    target = block_given? ? map(&block) : self
-    target.reduce(init, :+)
-  end
-end
-
 n = gets.chomp.to_i
 x, y, z = gets.chomp.split(' ').map(&:to_i)
 a = Array.new(n)
