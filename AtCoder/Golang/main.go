@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 	"strconv"
 )
 
@@ -76,6 +77,16 @@ func Pow(base int, exponent uint) int {
 		answer *= base
 	}
 	return answer
+}
+
+// *   sortutil
+
+func ReverseInts(a []int) {
+	sort.Sort(sort.Reverse(sort.IntSlice(a)))
+}
+
+func ReverseStrings(a []string) {
+	sort.Sort(sort.Reverse(sort.StringSlice(a)))
 }
 
 // *   io
