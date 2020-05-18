@@ -79,6 +79,19 @@ func Pow(base int, exponent uint) int {
 	return answer
 }
 
+func Ceil(divident, dividor int) int {
+	quo := divident / dividor
+	rem := divident % dividor
+
+	if rem != 0 {
+		if (divident > 0 && dividor > 0) ||
+			(divident < 0 && dividor < 0) {
+			return quo + 1
+		}
+	}
+	return quo
+}
+
 // *   sortutil
 
 func ReverseInts(a []int) {
