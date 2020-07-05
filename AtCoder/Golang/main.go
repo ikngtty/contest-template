@@ -35,7 +35,7 @@ func main() {
 	fmt.Println(total)
 }
 
-// util
+// from [my library](https://github.com/ikngtty/go-contestlib)
 // *   math/simple
 
 func Abs(x int) int {
