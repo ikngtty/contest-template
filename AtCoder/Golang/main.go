@@ -36,7 +36,7 @@ func main() {
 }
 
 // from [my library](https://github.com/ikngtty/go-contestlib)
-// *   math/simple
+// -   math/simple
 
 func Abs(x int) int {
 	if x >= 0 {
@@ -92,7 +92,7 @@ func Ceil(divident, dividor int) int {
 	return quo
 }
 
-// *   sortutil
+// -   sortutil
 
 func ReverseInts(a []int) {
 	sort.Sort(sort.Reverse(sort.IntSlice(a)))
@@ -102,7 +102,7 @@ func ReverseStrings(a []string) {
 	sort.Sort(sort.Reverse(sort.StringSlice(a)))
 }
 
-// *   io
+// -   io
 
 type Scanner struct {
 	bufScanner *bufio.Scanner
