@@ -49,6 +49,7 @@ func Min(values ...int) int {
 	if len(values) == 0 {
 		panic("no values")
 	}
+
 	min := values[0]
 	for _, v := range values {
 		if v < min {
@@ -62,6 +63,7 @@ func Max(values ...int) int {
 	if len(values) == 0 {
 		panic("no values")
 	}
+
 	max := values[0]
 	for _, v := range values {
 		if v > max {
@@ -75,6 +77,7 @@ func Pow(base, exponent int) int {
 	if exponent < 0 {
 		panic(fmt.Sprintf("exponent (%d) should not be a minus", exponent))
 	}
+
 	answer := 1
 	for i := 0; i < exponent; i++ {
 		answer *= base
