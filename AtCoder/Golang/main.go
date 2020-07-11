@@ -71,9 +71,12 @@ func Max(values ...int) int {
 	return max
 }
 
-func Pow(base int, exponent uint) int {
+func Pow(base, exponent int) int {
+	if exponent < 0 {
+		panic(fmt.Sprintf("exponent (%d) should not be a minus", exponent))
+	}
 	answer := 1
-	for i := uint(0); i < exponent; i++ {
+	for i := 0; i < exponent; i++ {
 		answer *= base
 	}
 	return answer
