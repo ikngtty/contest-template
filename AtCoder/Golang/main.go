@@ -13,26 +13,7 @@ func main() {
 
 	n := sc.ReadInt()
 
-	x := sc.ReadInt()
-	y := sc.ReadInt()
-	z := sc.ReadInt()
-
-	a := make([]int, n)
-	b := make([]int, n)
-	for i := 0; i < n; i++ {
-		a[i] = sc.ReadInt()
-		b[i] = sc.ReadInt()
-	}
-
-	total := x + y + z
-	for _, ai := range a {
-		total += ai
-	}
-	for _, bi := range b {
-		total += bi
-	}
-
-	fmt.Println(total)
+	fmt.Println(n)
 }
 
 // from [my library](https://github.com/ikngtty/go-contestlib)
