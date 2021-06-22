@@ -27,7 +27,7 @@ func ExtendedEuclidean(a, b int) (gcd, x, y int) {
 		y = 0
 		return
 	}
-	q, r := EuclideanDiv(a, b)
+	q, r := EucDiv(a, b)
 	gcd, s, t := ExtendedEuclidean(b, r)
 	x = t
 	y = s - q*t
@@ -105,8 +105,8 @@ func Ceil(divident, dividor int) int {
 	return quo
 }
 
-// EuclideanDiv does Euclidean divison.
-func EuclideanDiv(divident, dividor int) (quo, rem int) {
+// EucDiv does Euclidean divison.
+func EucDiv(divident, dividor int) (quo, rem int) {
 	if dividor == 0 {
 		panic("divide by zero")
 	}
