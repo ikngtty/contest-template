@@ -17,23 +17,6 @@ func main() {
 }
 
 // from [my library](https://github.com/ikngtty/go-contestlib)
-// package math/modular
-
-// ExtendedEuclidean does the extended Euclidean algorithm.
-func ExtendedEuclidean(a, b int) (gcd, x, y int) {
-	if b == 0 {
-		gcd = a
-		x = 1
-		y = 0
-		return
-	}
-	q, r := EucDiv(a, b)
-	gcd, s, t := ExtendedEuclidean(b, r)
-	x = t
-	y = s - q*t
-	return
-}
-
 // package math/simple
 
 // Abs returns the absolute value of x.
