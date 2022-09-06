@@ -8,6 +8,8 @@ import (
 	"strconv"
 )
 
+const MaxInt = int(^uint(0) >> 1)
+
 func main() {
 	sc := NewScanner()
 
