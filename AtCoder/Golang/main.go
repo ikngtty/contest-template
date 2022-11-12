@@ -143,6 +143,15 @@ func Make2DBoolArray(xLen, yLen int, initVal bool) [][]bool {
 	return a
 }
 
+// Make2DByteArray returns a slice of the two-dimensional byte array.
+func Make2DByteArray(xLen, yLen int) [][]byte {
+	a := make([][]byte, xLen)
+	for x := 0; x < xLen; x++ {
+		a[x] = make([]byte, yLen)
+	}
+	return a
+}
+
 // MakeIntArray returns a slice of the int array.
 func MakeIntArray(length int, initVal int) []int {
 	a := make([]int, length)
