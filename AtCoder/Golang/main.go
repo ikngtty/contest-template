@@ -168,6 +168,15 @@ func Make2DBools(xLen, yLen int, initVal bool) [][]bool {
 	return a
 }
 
+// Copy2DBools copy the two-dimensional bool array.
+func Copy2DBools(dst *[][]bool, src [][]bool) {
+	*dst = make([][]bool, len(src))
+	for i := 0; i < len(src); i++ {
+		(*dst)[i] = make([]bool, len(src[i]))
+		copy((*dst)[i], src[i])
+	}
+}
+
 // Make2DBytes returns a slice of the two-dimensional byte array.
 func Make2DBytes(xLen, yLen int) [][]byte {
 	a := make([][]byte, xLen)
@@ -175,6 +184,15 @@ func Make2DBytes(xLen, yLen int) [][]byte {
 		a[x] = make([]byte, yLen)
 	}
 	return a
+}
+
+// Copy2DBytes copy the two-dimensional byte array.
+func Copy2DBytes(dst *[][]byte, src [][]byte) {
+	*dst = make([][]byte, len(src))
+	for i := 0; i < len(src); i++ {
+		(*dst)[i] = make([]byte, len(src[i]))
+		copy((*dst)[i], src[i])
+	}
 }
 
 // MakeInts returns a slice of the int array.
@@ -206,6 +224,15 @@ func Make2DInts(xLen, yLen int, initVal int) [][]int {
 	}
 
 	return a
+}
+
+// Copy2DInts copy the two-dimensional int array.
+func Copy2DInts(dst *[][]int, src [][]int) {
+	*dst = make([][]int, len(src))
+	for i := 0; i < len(src); i++ {
+		(*dst)[i] = make([]int, len(src[i]))
+		copy((*dst)[i], src[i])
+	}
 }
 
 // package sortutil
