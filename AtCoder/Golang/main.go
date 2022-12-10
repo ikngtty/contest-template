@@ -137,8 +137,8 @@ func GCD(a, b int) int {
 
 // package arrayutil
 
-// MakeBoolArray returns a slice of the bool array.
-func MakeBoolArray(length int, initVal bool) []bool {
+// MakeBools returns a slice of the bool array.
+func MakeBools(length int, initVal bool) []bool {
 	a := make([]bool, length)
 
 	if initVal {
@@ -150,8 +150,8 @@ func MakeBoolArray(length int, initVal bool) []bool {
 	return a
 }
 
-// Make2DBoolArray returns a slice of the two-dimensional bool array.
-func Make2DBoolArray(xLen, yLen int, initVal bool) [][]bool {
+// Make2DBools returns a slice of the two-dimensional bool array.
+func Make2DBools(xLen, yLen int, initVal bool) [][]bool {
 	a := make([][]bool, xLen)
 	for x := 0; x < xLen; x++ {
 		a[x] = make([]bool, yLen)
@@ -168,8 +168,8 @@ func Make2DBoolArray(xLen, yLen int, initVal bool) [][]bool {
 	return a
 }
 
-// Make2DByteArray returns a slice of the two-dimensional byte array.
-func Make2DByteArray(xLen, yLen int) [][]byte {
+// Make2DBytes returns a slice of the two-dimensional byte array.
+func Make2DBytes(xLen, yLen int) [][]byte {
 	a := make([][]byte, xLen)
 	for x := 0; x < xLen; x++ {
 		a[x] = make([]byte, yLen)
@@ -177,8 +177,8 @@ func Make2DByteArray(xLen, yLen int) [][]byte {
 	return a
 }
 
-// MakeIntArray returns a slice of the int array.
-func MakeIntArray(length int, initVal int) []int {
+// MakeInts returns a slice of the int array.
+func MakeInts(length int, initVal int) []int {
 	a := make([]int, length)
 
 	if initVal != 0 {
@@ -190,8 +190,8 @@ func MakeIntArray(length int, initVal int) []int {
 	return a
 }
 
-// Make2DIntArray returns a slice of the two-dimensional int array.
-func Make2DIntArray(xLen, yLen int, initVal int) [][]int {
+// Make2DInts returns a slice of the two-dimensional int array.
+func Make2DInts(xLen, yLen int, initVal int) [][]int {
 	a := make([][]int, xLen)
 	for x := 0; x < xLen; x++ {
 		a[x] = make([]int, yLen)
