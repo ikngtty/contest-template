@@ -19,6 +19,15 @@ func main() {
 }
 
 // from [my library](https://github.com/ikngtty/go-contestlib)
+// package types
+
+type Ordered interface {
+	~int | ~int8 | ~int16 | ~int32 | ~int64 |
+		~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr |
+		~float32 | ~float64 |
+		~string
+}
+
 // package math/simple
 
 // Abs returns the absolute value of x.
@@ -30,7 +39,7 @@ func Abs(x int) int {
 }
 
 // Min returns the minimum value of the specified values.
-func Min(values ...int) int {
+func Min[T Ordered](values ...T) T {
 	if len(values) == 0 {
 		panic("no values")
 	}
@@ -45,7 +54,7 @@ func Min(values ...int) int {
 }
 
 // Max returns the maximum value of the specified values.
-func Max(values ...int) int {
+func Max[T Ordered](values ...T) T {
 	if len(values) == 0 {
 		panic("no values")
 	}
